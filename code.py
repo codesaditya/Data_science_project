@@ -9,7 +9,7 @@ st.title("BITCOIN PRICE PREDICTION")
 number = st.number_input("Select a number of previous days to consider for prediction:", min_value=10, max_value=1000, value=50)
 d1 = today.strftime("%Y-%m-%d")
 end_date = d1
-d2 = date.today() - timedelta(days=730)
+d2 = date.today() - timedelta(days=number)
 d2 = d2.strftime("%Y-%m-%d")
 start_date = d2
 data = yf.download('BTC-USD', 
